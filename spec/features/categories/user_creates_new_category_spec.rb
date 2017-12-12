@@ -7,7 +7,7 @@ describe "User creates a new category" do
     fill_in "category[title]", with: "Web Development"
     click_button "Create"
 
-    expect(current_path).to eq(category_path)
+    expect(current_path).to eq(category_path(Category.last.id))
     expect(page).to have_content("Web Development")
     expect(Category.count).to eq(1)
   end
