@@ -2,12 +2,11 @@ require 'rails_helper'
 
 describe "User sees all categories" do
   scenario "a user sees all the categories" do
-    category = Category.create!(title: "Web Development")
-    category2 = Category.create!(title: "Finance")
+    category1, category2 = create_list(:category, 2)
 
     visit categories_path
 
-    expect(page).to have_content("Web Development")
-    expect(page).to have_content("Finance")
+    expect(page).to have_content(category1.title)
+    expect(page).to have_content(category2.title)
   end
 end

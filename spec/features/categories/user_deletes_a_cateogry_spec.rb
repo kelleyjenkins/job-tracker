@@ -9,6 +9,6 @@ describe "User deletes existing category" do
       click_link "Delete"
     end
 
-    expect(page).to have_content("Computers was successfully deleted!")
+    expect(page).to have_content("#{category.title} was successfully deleted!")
   end
 end
