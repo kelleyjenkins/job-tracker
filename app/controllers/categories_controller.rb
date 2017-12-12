@@ -20,6 +20,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @job = Job.find_by(category_id: @category.id)
   end
 
   def edit
