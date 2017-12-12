@@ -4,6 +4,7 @@ Job.destroy_all
 COMPANIES = ["ESPN", "Aetna", "United Airlines", "Denver Public Schools", "Shopify", "Starbucks", "Pivotal Labs", "Captain U"]
 JOBS = ["Engineering", "Development", "Dev Ops", "Quality Assurance", "Teacher", "Product Manager", "Consultant", "Community Manager"]
 CITIES = ["Seattle", "Denver", "Portland", "Indianapolis", "Madison", "Orlando", "San Diego", "Austin", "Las Vegas", "Little Rock", "Boise", "Eugene", "Oakland"]
+CATEGORIES = ["Web Development", "Sales", "Engineering", "Customer Support"]
 
 COMPANIES.each do |name|
   company = Company.create!(name: name)
