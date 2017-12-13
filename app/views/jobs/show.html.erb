@@ -12,6 +12,12 @@ City: <%= @job.city %>
 
 Category: <%=@job.category.title %>
 
+<br>
+
 Company: <%= link_to @job.company.name, company_path(@job.company) %>
 
 <br>
+
+<h3>Comments</h3>
+<%= render partial: 'jobs/comment', collection: @job.comments.reverse %>
+<%= render partial: 'comments/form' %>
