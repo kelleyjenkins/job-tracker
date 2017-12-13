@@ -4,7 +4,7 @@ describe "User edits an existing job" do
   scenario "a user can edit a job" do
     company = create(:company)
     category = create(:category)
-    job = company.jobs.create!(title: "Developer", description: "So fun!", level_of_interest: 70, city: "Denver", category_id: category.id)
+    job = create(:job, company: company, category: category)
 
     visit edit_company_job_path(company, job)
 
