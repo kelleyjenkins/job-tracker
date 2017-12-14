@@ -1,0 +1,20 @@
+header {
+  text-align: center
+}
+
+.company_list {
+    column-count: 2;
+    text-align: center;
+    background-color: #e0eeeb;
+  }
+
+ li {
+  list-style-type: none
+}
+
+
+li p {
+  display: inline;
+  padding-right: 10px;
+
+}
