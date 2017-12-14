@@ -1,0 +1,18 @@
+<h1>Dashboard!</h1>
+<p> Number of Jobs by level of interest: <br/></p>
+  <% @jobs.jobs_by_interest.each do |level, count| %>
+  Level of Interest: <%= level %><br/>
+  Jobs: <%= count %><br>
+  <% end %>
+
+
+<p> Top 3 companies ranked by average level of interest: <% @jobs.avg_interest_by_company.each do |id, avg| %>
+  <%= @company.find(id).name %>
+<%= avg.to_i %>
+<% end %></p>
+
+
+<p> Jobs by Location: </p>
+<% @jobs.location_count.each do |location| %>
+<li><%= link_to "#{location[0]}", "/jobs?location=#{location[0]}"%>: <%= location[1] %> jobs</li>
+<% end %>
